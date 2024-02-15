@@ -66,4 +66,11 @@ $listening_ports
 UFW Rules: 
 $UFW_RULES
 ---------------------------------------------------------------------------------------------------------------
+#<pre><font color="#26A269"><b>shrey@Generic-VM</b></font>:<font color="#12488B"><b>~/Linux-Automation-</b></font>$ bash Assignment-1-System-Report.sh
+#WARNING: you should run this program as super-user.
+#WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+#WARNING: you should run this program as super-user.
+#WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+#Assignment-1-System-Report.sh: line 17: systemd-resolve: command not found
+#</pre>
 "
