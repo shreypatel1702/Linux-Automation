@@ -2,8 +2,8 @@
 
 # Gather System Information
 hostname=$(hostname)
-os=$(source /etc/os-release && echo $PRETTY_NAME)
 uptime=$(uptime -p)
+os=$(source /etc/os-release && echo $PRETTY_NAME)
 
 # Gather Hardware Information
 cpu=$(sudo lshw -class processor | grep "product" | head -1)
