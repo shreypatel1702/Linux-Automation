@@ -2,7 +2,7 @@
 
 # Gather System Information
 hostname=$(hostname)
-os=$(source /etc/os-release && echo $name)
+os=$(source /etc/os-release && echo $pretty_name)
 uptime=$(uptime -p)
 
 # Gather Hardware Information
