@@ -6,15 +6,15 @@ os=$(source /etc/os-release && echo $name)
 uptime=$(uptime -p)
 
 # Gather Hardware Information
-cpu=$(lshw -class processor | grep "product" | head -1)
+cpu=$(sudo lshw -class processor | grep "product" | head -1)
 ram=$(free -h | grep Mem | awk '{print $2}')
 disks=$(lsblk -d | awk '{print $1, $4}')
-video=$(lshw -class display | grep "product")
+video=$(sudo lshw -class display | grep "product")
 
 # Gather Network Information
 ip=$(hostname -I | awk '{print $1}')
 gateway=$(ip r | grep default | awk '{print $3}')
-dns=$(systemd-resolve --status | grep 'DNS Servers' | head -1 | awk '{print $3}')
+dns=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
 fqdn=$(hostname -f)
 
 # Gather System Status
@@ -64,13 +64,6 @@ $memory_allocation
 Listening Network Ports: 
 $listening_ports
 UFW Rules: 
-$UFW_RULES
+$ufw_rules
 ---------------------------------------------------------------------------------------------------------------
-#<pre><font color="#26A269"><b>shrey@Generic-VM</b></font>:<font color="#12488B"><b>~/Linux-Automation-</b></font>$ bash Assignment-1-System-Report.sh
-#WARNING: you should run this program as super-user.
-#WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
-#WARNING: you should run this program as super-user.
-#WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
-#Assignment-1-System-Report.sh: line 17: systemd-resolve: command not found
-#</pre>
 "
