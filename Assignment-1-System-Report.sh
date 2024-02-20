@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Gather System Information
+# GATHERED SYSTEM INFORMATION
 hostname=$(hostname)
 uptime=$(uptime -p)
 os=$(source /etc/os-release && echo $PRETTY_NAME)
 
-# Gather Hardware Information
+# GATHERED HARDWARE INFORMATION
 video=$(sudo lshw -class display | grep "product")
 cpu=$(sudo lshw -class processor | grep "product" | head -1)
 disks=$(lsblk -d | awk '{print $1, $4}')
 ram=$(free -h | grep Mem | awk '{print $2}')
 
 
-# Gather Network Information
+# GATHERED NETWORK INFORMATION
 fqdn=$(hostname -f)
 ip=$(hostname -I | awk '{print $1}')
 dns=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
@@ -20,7 +20,7 @@ gateway=$(ip r | grep default | awk '{print $3}')
 
 
 
-# Gather System Status
+# GATHERED SYSTEM STATUS
 users=$(who | awk '{print $1}' | sort | uniq)
 disk_space=$(df -h)
 memory_allocation=$(free -h)
@@ -29,7 +29,7 @@ load_average=$(uptime | awk -F'[a-z]:' '{ print $2}')
 ufw_rules=$(sudo ufw status verbose)
 listening_ports=$(ss -tulwn | grep LISTEN)
 
-# Print Report
+# FINAL REPORT PRINTED
 
 echo "
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
