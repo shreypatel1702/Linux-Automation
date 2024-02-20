@@ -43,7 +43,7 @@ Uptime: $uptime
 
 Hardware Information
 --------------------------------------------------------------------------------------------------------------------------------------
-$cpu
+CPU:$cpu
 Ram: $ram
 Disk(s): $disks
 Video: $video
@@ -58,15 +58,11 @@ DNS Server: $dns
 System Status
 ------------------------------------------------------------------------------------------------------------
 Users Logged In: $users
-Disk Space: 
-$disk_space
-Process Count: $process_count
-Load Averages: $load_average
-Memory Allocation: 
-$memory_allocation
-Listening Network Ports: 
-$listening_ports
-UFW Rules: 
-$ufw_rules
+Disk Space:     $disk_space
+Process Count:     $process_count
+Load Averages:        $load_average
+Memory Allocation:       $memory_allocation
+Listening Network Ports:      $listening_ports
+UFW Rules:$ufw_rules
 ---------------------------------------------------------------------------------------------------------------
 "
