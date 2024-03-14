@@ -104,7 +104,7 @@ create_user_accounts() {
 
         # Configure SSH keys for the user
         sudo mkdir -p "/home/$user/.ssh"
-        sudo cp "/root/.ssh/authorized_keys" "/home/$user/.ssh/"
+        sudo cp "/root/.ssh" "/home/$user/.ssh/"
         sudo chown -R "$user:$user" "/home/$user/.ssh"
         sudo chmod 700 "/home/$user/.ssh"
         sudo chmod 600 "/home/$user/.ssh"
