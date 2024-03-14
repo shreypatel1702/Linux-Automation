@@ -101,13 +101,11 @@ create_user_accounts() {
         else
             print_info "User $user already exists"
         fi
-
-        # Configure SSH keys for the user
-        sudo mkdir -p "/home/.ssh"
-        sudo cp "/root/.ssh" "/home/.ssh/"
-        sudo chown -R "$user:$user" "/home/.ssh"
-        sudo chmod 700 "/home/.ssh"
-        sudo chmod 600 "/home/.ssh"
+        sudo mkdir -p "/home/$user/.ssh"
+        sudo cp "/home/.ssh" "/home/$user/.ssh/"
+        sudo chown -R "$user:$user" "/home/$user/.ssh"
+        sudo chmod 700 "/home/$user/.ssh"
+        sudo chmod 600 "/home/$user/.ssh"
 
         # Add sudo access for dennis
         if [[ "$user" == "dennis" ]]; then
