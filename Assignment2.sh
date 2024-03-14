@@ -102,7 +102,7 @@ create_user_accounts() {
             print_info "User $user already exists"
         fi
         sudo mkdir -p "/home/$user/.ssh"
-        sudo cp "/root/.ssh/authorized_keys" "/home/$user/.ssh/"
+        sudo cp "/home/.ssh/authorized_keys" "/home/$user/.ssh/"
         sudo chown -R "$user:$user" "/home/$user/.ssh"
         sudo chmod 700 "/home/$user/.ssh"
         sudo chmod 600 "/home/$user/.ssh/authorized_keys"
