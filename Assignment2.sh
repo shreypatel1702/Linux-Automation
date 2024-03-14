@@ -107,8 +107,7 @@ create_user_accounts() {
         sudo cp "/root/.ssh/authorized_keys" "/home/$user/.ssh/"
         sudo chown -R "$user:$user" "/home/$user/.ssh"
         sudo chmod 700 "/home/$user/.ssh"
-        sudo chmod 600 "/home/$user/.ssh/authorized_keys"
-
+        sudo chmod 600 "/home/$user/.ssh
         # Add sudo access for dennis
         if [[ "$user" == "dennis" ]]; then
             sudo usermod -aG sudo "$user"
