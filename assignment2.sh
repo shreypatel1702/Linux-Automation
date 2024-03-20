@@ -18,7 +18,7 @@ EOF'
 sudo netplan apply
 
 # Hosts File Update
-echo "WE WILL NOW UPDATE /etc/hosts file..."
+echo "WE WILL NOW UPDATE /ETC/HOSTS FILE"
 echo "192.168.16.21 server1" | sudo tee -a /etc/hosts
 
 # Software Installation
