@@ -29,25 +29,33 @@ chmod +x ~/check-assign2-script &&
 
 
 
-shrey@Generic-VM:~/Linux-Automation$ ssh remoteadmin@server1-mgmt
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the ED25519 key sent by the remote host is
-SHA256:6ZD/UHYEPDi5J1m1C9zyzXHh8F5b1g3q0bQYYvQyqks.
-Please contact your system administrator.
-Add correct host key in /home/shrey/.ssh/known_hosts to get rid of this message.
-Offending ECDSA key in /home/shrey/.ssh/known_hosts:6
-  remove with:
-  ssh-keygen -f "/home/shrey/.ssh/known_hosts" -R "server1-mgmt"
-Host key for server1-mgmt has changed and you have requested strict checking.
-Host key verification failed.
-shrey@Generic-VM:~/Linux-Automation$ 
-
 
 
 ssh-keygen -f "/home/shrey/.ssh/known_hosts" -R "server1-mgmt"
 
+
+
+
+
+hrey@Generic-VM:~$ ~/makecontainers.sh --prefix server --count2 --fresh
+Deleting any existing target containers
+Deleting any existing openwrt container
+Error: Failed checking instance exists "local:openwrt": Instance not found
+Network lan deleted
+Network mgmt deleted
+Checking for sudo
+sudo access ok
+Adding hostvm to /etc/hosts file if necessary
+Adding openwrt to /etc/hosts file if necessary
+Network lan created
+Network mgmt created
+Creating server1
+Starting server1                          
+Waiting for server1 to complete startup
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+Adding SSH host key for server1
+Adding remote admin user 'remoteadmin' to server1
+Setting server1 hostname                                                                                                 
+Waiting for server1 reboot
+Adding server1 to /etc/hosts file if necessary
+shrey@Generic-VM:~$
