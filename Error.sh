@@ -26,3 +26,23 @@ chmod +x ~/check-assign2-script &&
 
 ~/check-assign2-script https://github.com/yourgithubusername/yourreponame/assignment2.sh 2>&1 >~/assignment2-checked.txt
 
+
+
+
+shrey@Generic-VM:~/Linux-Automation$ ssh remoteadmin@server1-mgmt
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ED25519 key sent by the remote host is
+SHA256:6ZD/UHYEPDi5J1m1C9zyzXHh8F5b1g3q0bQYYvQyqks.
+Please contact your system administrator.
+Add correct host key in /home/shrey/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/shrey/.ssh/known_hosts:6
+  remove with:
+  ssh-keygen -f "/home/shrey/.ssh/known_hosts" -R "server1-mgmt"
+Host key for server1-mgmt has changed and you have requested strict checking.
+Host key verification failed.
+shrey@Generic-VM:~/Linux-Automation$ 
