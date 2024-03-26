@@ -46,3 +46,8 @@ Offending ECDSA key in /home/shrey/.ssh/known_hosts:6
 Host key for server1-mgmt has changed and you have requested strict checking.
 Host key verification failed.
 shrey@Generic-VM:~/Linux-Automation$ 
+
+
+
+ssh-keygen -f "/home/shrey/.ssh/known_hosts" -R "server1-mgmt"
+
