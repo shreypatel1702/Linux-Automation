@@ -4,7 +4,7 @@
 
 echo "WE WILL NOW CONFIGURE NETWORK CONFIGURATION"
 echo "--------------------------------------------------------------------------------------------------------------------------------"
-sudo bash -c 'cat << EOF > /etc/netplan/01-netcfg.yaml
+sudo bash -c 'cat <<EOF > /etc/netplan/01-netcfg.yaml
 network:
   version: 2
   renderer: networkd
