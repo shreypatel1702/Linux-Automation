@@ -7,17 +7,7 @@ echo "--------------------------------------------------------------------------
 sudo bash -c 'cat << EOF > /etc/netplan/01-netcfg.yaml
 network:
   version: 2
-  renderer: networkd
-  ethernets:
-    eth0:
-      dhcp4: no
-      addresses: [192.168.16.21/24]
-      gateway4: 192.168.16.2
-      nameservers:
-        addresses: [192.168.16.2]
-        search: [home.arpa, localdomain]
-EOF'
-sudo netplan apply
+@@ -19,22 +21,26 @@ sudo netplan apply
 
 # Hosts File Update
 echo "WE WILL NOW UPDATE /ETC/HOSTS FILE"
@@ -44,16 +34,10 @@ echo "--------------------------------------------------------------------------
 for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy tiger yoda; do
   sudo adduser --gecos "" --disabled-password $user
   if [ $user = "dennis" ]; then
-    echo "$user ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$user
-    sudo mkdir /home/$user/.ssh
+@@ -43,5 +49,5 @@ for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy t
     echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG4rT3vTt99Ox5kndS4HmgTrKBT8SKzhK4rhGkEVGlCI student@generic-vm" | sudo tee /home/$user/.ssh/authorized_keys
   fi
 done
+
 echo "-----------------------------------------------------------------------------------------------------------------------------------------"
-
-echo "Checking Open vSwitch service status..."
-sudo systemctl status openvswitch-switch
-
 echo " ALL CONFIGURATION DONE "
-
-Is this scriopt correctly made as it shows wrror in network configuration
