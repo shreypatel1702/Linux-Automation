@@ -29,10 +29,6 @@ echo "wE WILL NOY INSTALL APACHE AND SQUID "
 echo "---------------------------------------------------------------------------------------------------------------------------------"
 sudo apt update
 sudo apt install -y apache2 squid
-#Checking OPENVSWITCH SERVICE STATUS
-echo "Checking Open vSwitch service status--------------------------------------------------------------------------------------------------------"
-systemctl status openvswitch-switch
-
 
 # Firewall Configuration
 echo "WE WILL NOW SET UP THE UFW FIREWALL"
@@ -54,4 +50,10 @@ for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy t
   fi
 done
 echo "-----------------------------------------------------------------------------------------------------------------------------------------"
+
+echo "Checking Open vSwitch service status..."
+sudo systemctl status openvswitch-switch
+
 echo " ALL CONFIGURATION DONE "
+
+Is this scriopt correctly made as it shows wrror in network configuration
