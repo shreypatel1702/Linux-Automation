@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Network Interface Configuration
-echo "Configuring network interface..."
+echo "NOW WE WILL DO NETWORK CONFIGURATION---------------------------------------------------------------------------------------------------------------------------------"
 sudo bash -c 'cat << EOF > /etc/netplan/01-netcfg.yaml
 network:
   version: 2
@@ -18,23 +18,23 @@ EOF'
 sudo netplan apply
 
 # Hosts File Update
-echo "Updating /etc/hosts file..."
+echo "NOW WE WILL UPDATE /ETC/HOSTS-----------------------------------------------------------------------------------------------------------------------"
 echo "192.168.16.21 server1" | sudo tee -a /etc/hosts
 
 # Software Installation
-echo "Installing apache2 and squid..."
+echo "NOW WE WILL INSTALL APACHE2 and SQUID PACKAGES----------------------------------------------------------------------------------------------------------------------------"
 sudo apt update
 sudo apt install -y apache2 squid
 
 # Firewall Configuration
-echo "Setting up ufw firewall..."
+echo "WE WILL BE SETTING UP THE FIREWALL---------------------------------------------------------------------------------------------------------------------------------------"
 sudo ufw enable
 sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 3128
 
 # User Account Management
-echo "Creating user accounts..."
+echo "NOW WE WILL BE CREATING THE USER ACCOUNT MANAGEMENT------------------------------------------------------------------------------------------------------------------------------"
 for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy tiger yoda; do
   sudo adduser --gecos "" --disabled-password $user
   if [ $user = "dennis" ]; then
@@ -44,4 +44,4 @@ for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy t
   fi
 done
 
-echo "All tasks completed successfully!"
+echo "WE HAVE SUCCESSFULLY COMPLETED ALL THE CONFIGURATIONS----------------------------------------------------------------------------------------------------------------------------------------"
