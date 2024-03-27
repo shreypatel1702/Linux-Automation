@@ -29,6 +29,10 @@ echo "wE WILL NOY INSTALL APACHE AND SQUID "
 echo "---------------------------------------------------------------------------------------------------------------------------------"
 sudo apt update
 sudo apt install -y apache2 squid
+#Checking OPENVSWITCH SERVICE STATUS
+echo "Checking Open vSwitch service status--------------------------------------------------------------------------------------------------------"
+systemctl status openvswitch-switch
+
 
 # Firewall Configuration
 echo "WE WILL NOW SET UP THE UFW FIREWALL"
