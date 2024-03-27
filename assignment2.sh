@@ -1,9 +1,8 @@
 #!/bin/bash
-# Network Interface Configuration
 
-echo "WE WILL NOW CONFIGURE NETWORK CONFIGURATION"
-echo "--------------------------------------------------------------------------------------------------------------------------------"
-sudo bash -c 'cat <<EOF > /etc/netplan/01-netcfg.yaml
+# Network Interface Configuration
+echo "Configuring network interface..."
+sudo bash -c 'cat << EOF > /etc/netplan/01-netcfg.yaml
 network:
   version: 2
   renderer: networkd
@@ -19,27 +18,23 @@ EOF'
 sudo netplan apply
 
 # Hosts File Update
-echo "WE WILL NOW UPDATE /ETC/HOSTS FILE"
-echo "-------------------------------------------------------------------------------------------------------------------------"
+echo "Updating /etc/hosts file..."
 echo "192.168.16.21 server1" | sudo tee -a /etc/hosts
 
 # Software Installation
-echo "WE WILL NOW INSTALL APACHE AND SQUID"
-echo "---------------------------------------------------------------------------------------------------------------------------------"
+echo "Installing apache2 and squid..."
 sudo apt update
 sudo apt install -y apache2 squid
 
 # Firewall Configuration
-echo "WE WILL NOW SET UP THE UFW FIREWALL"
-echo "-----------------------------------------------------------------------------------------------------------------------------------------------"
+echo "Setting up ufw firewall..."
 sudo ufw enable
 sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 3128
 
 # User Account Management
-echo "WE WILL NOW CREATE THE USER ACCOUNTS"
-echo "--------------------------------------------------------------------------------------------------------------------------------------"
+echo "Creating user accounts..."
 for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy tiger yoda; do
   sudo adduser --gecos "" --disabled-password $user
   if [ $user = "dennis" ]; then
@@ -49,5 +44,4 @@ for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy t
   fi
 done
 
-echo "-----------------------------------------------------------------------------------------------------------------------------------------"
-echo "ALL CONFIGURATION DONE"
+echo "All tasks completed successfully!"
