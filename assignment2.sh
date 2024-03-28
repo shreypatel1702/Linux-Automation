@@ -19,7 +19,7 @@ sudo apt update
 sudo apt install -y apache2 squid
 
 # User Account Management
-echo "NOW WE WILL BE CREATING THE USER ACCOUNT MANAGEMENT------------------------------------------------------------------------------------------------------------------------------"
+echo "NOW WE WILL BE CREATING THE USER------------------------------------------------------------------------------------------------------------------------------"
 for user in dennis aubrey captain snibbles brownie scooter sandy perrier cindy tiger yoda; do
   sudo adduser --gecos "" --disabled-password $user
   if [ $user = "dennis" ]; then
