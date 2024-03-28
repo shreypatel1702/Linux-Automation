@@ -6,15 +6,15 @@ In this assignment, you will be modifying an existing Ubuntu 22.04 server. In or
 
 
 
-student@generic-vm% wget -O ~/makecontainers.sh https://zonzorp.github.io/COMP2137/makecontainers.sh && chmod +x ~/makecontainers.sh
+student@generic-vm% wget -O ~/repositoryname/makecontainers.sh https://zonzorp.github.io/COMP2137/makecontainers.sh && chmod +x ~/repositoryname/makecontainers.sh
 
 
 
-Run this script in your existing generic-vm to create your server container using this command:
+Run make containers in your existing generic-vm to create your server container using this command:
 
 
 
-student@generic-vm% ~/makecontainers.sh --prefix server --count 2 --fresh
+student@generic-vm% ~/repositoryname/makecontainers.sh --prefix server --count 2 --fresh
 
 
 
@@ -92,25 +92,6 @@ To submit this assignment, you will need to create 2 files. Your script file whi
 
 Start a fresh terminal window on your VM. Run the following command and screenshot all of the output:
 
-
-
-generic-vm% wget -O ~/check-assign2-script.sh https://zonzorp.github.io/COMP2137/check-assign2-script.sh &&
-
-chmod +x ~/check-assign2-script.sh &&
-
-~/check-assign2-script.sh https://github.com/yourgithubusername/yourreponame/assignment2.sh 2>&1 >~/assignment2-checked.txt
-
-
-
-Review the rubric linked above for details on how your work will be graded.
-
-You are done with the learning activity for this lesson and should proceed to writing the quiz for this lesson before the next class in this course begins.
-
-
-
-
-
-
 cd ~/repositoryname &&
 wget -O check-assign2-script.sh https://zonzorp.github.io/COMP2137/check-assign2-script.sh &&
 chmod +x ./check-assign2-script.sh &&
@@ -118,27 +99,3 @@ chmod +x ./check-assign2-script.sh &&
 git add -A &&
 git commit -m "Assignmment2 checked" &&
 git push
-
-
-
-
-
-
-
-
-
-shrey@Generic-VM:~/Linux-Automation$ cd ~/Linux-Automation && wget -O check-assign2-script.sh https://zonzorp.github.io/COMP2137/check-assign2-script.sh && chmod +x ./check-assign2-script.sh && ./check-assign2-script.sh https://github.com/shreypatel1702/Linux-Automation/assignment2.sh 2>&1 >assignment2-checked.txt && git add -A && git commit -m "Assignmment2 checked" && git push
---2024-03-28 12:28:00--  https://zonzorp.github.io/COMP2137/check-assign2-script.sh
-Resolving zonzorp.github.io (zonzorp.github.io)... 185.199.111.153, 185.199.109.153, 185.199.110.153, ...
-Connecting to zonzorp.github.io (zonzorp.github.io)|185.199.111.153|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 2236 (2.2K) [application/x-sh]
-Saving to: ‘check-assign2-script.sh’
-
-check-assign2-script.sh          100%[==========================================================>]   2.18K  --.-KB/s    in 0s      
-
-2024-03-28 12:28:00 (22.8 MB/s) - ‘check-assign2-script.sh’ saved [2236/2236]
-
-Error: Failed loading network: Network not found
-Error: Failed loading network: Network not found
-shrey@Generic-VM:~/Linux-Automation$ 
