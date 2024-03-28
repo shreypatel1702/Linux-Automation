@@ -1,5 +1,5 @@
 ---Host/Student info----
-Running on Generic-VM at Thu Mar 28 12:38:56 PM EDT 2024
+Running on Generic-VM at Thu Mar 28 01:50:37 PM EDT 2024
 Run by shrey - ()
 30474c1520d0baf05518d236f93c2bbc  ./check-assign2-script.sh
 ------------------------
@@ -8,7 +8,20 @@ Run by shrey - ()
 ---Running makecontainers.sh----------
 Deleting any existing target containers
 Deleting any existing openwrt container
+Network lan deleted
+Network mgmt deleted
 Checking for sudo
 sudo access ok
 Adding hostvm to /etc/hosts file if necessary
-Cannot determine lxdbr0 interface address of hostvm. Must fix this first.
+Network lan created
+Network mgmt created
+Creating server1
+Retrieving image: Unpack: 100% (798.45MB/s)                                            Retrieving image: Unpack: 100% (798.45MB/s)                                            Starting server1
+Waiting for server1 to complete startup
+Adding SSH host key for server1
+Adding remote admin user 'remoteadmin' to server1
+Pushing /var/lib/snapd/hostfs/home/shrey/.ssh/id_ed25519.pub to /home/remoteadmin/.ssh/id_ed25519.pub: 100% (155.80MB/s)                                                                                                                         Setting server1 hostname
+Waiting for server1 reboot
+Adding server1 to /etc/hosts file if necessary
+---Retrieving assignment2.sh script---
+Failed to retrieve assignment2.sh script using URL 'https://github.com/shreypatel1702/Linux-Automation/assignment2.sh'
