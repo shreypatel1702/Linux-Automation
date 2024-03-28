@@ -6,8 +6,8 @@ In this assignment, you will be modifying an existing Ubuntu 22.04 server. In or
 
 
 
-student@generic-vm% wget -O ~/repositoryname/makecontainers.sh https://zonzorp.github.io/COMP2137/makecontainers.sh && chmod +x ~/repositoryname/makecontainers.sh
-
+student@generic-vm% wget -O ~/repositoryname/makecontainers.sh https://zonzorp.github.io/COMP2137/makecontainers.sh && 
+chmod +x ~/repositoryname/makecontainers.sh
 
 
 Run make containers in your existing generic-vm to create your server container using this command:
