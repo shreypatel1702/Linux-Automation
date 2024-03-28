@@ -1,0 +1,14 @@
+---Host/Student info----
+Running on Generic-VM at Thu Mar 28 12:28:00 PM EDT 2024
+Run by shrey - ()
+30474c1520d0baf05518d236f93c2bbc  ./check-assign2-script.sh
+------------------------
+
+---Start of Assignment2.sh Check------
+---Running makecontainers.sh----------
+Deleting any existing target containers
+Deleting any existing openwrt container
+Checking for sudo
+sudo access ok
+Adding hostvm to /etc/hosts file if necessary
+Cannot determine lxdbr0 interface address of hostvm. Must fix this first.
