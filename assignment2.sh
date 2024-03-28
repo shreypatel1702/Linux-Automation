@@ -9,7 +9,7 @@ network:
   ethernets:
     eth0:
       dhcp4: no
-      addresses: [192.168.16.21/24]
+      addresses: [192.168.16.21/24] # Change this IP address as needed
       gateway4: 192.168.16.2
       nameservers:
         addresses: [192.168.16.2]
@@ -19,7 +19,7 @@ sudo netplan apply
 
 # Hosts File Update
 echo "NOW WE WILL UPDATE /ETC/HOSTS-----------------------------------------------------------------------------------------------------------------------"
-echo "192.168.16.21 server1" | sudo tee -a /etc/hosts
+echo "192.168.16.21 server1" | sudo tee -a /etc/hosts 
 
 # Software Installation
 echo "NOW WE WILL INSTALL APACHE2 and SQUID PACKAGES----------------------------------------------------------------------------------------------------------------------------"
