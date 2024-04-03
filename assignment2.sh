@@ -49,4 +49,3 @@ sudo netplan apply
 
 
 echo "WE HAVE SUCCESSFULLY COMPLETED ALL THE CONFIGURATIONS----------------------------------------------------------------------------------------------------------------------------------------"
->>>>>>> origin/main
